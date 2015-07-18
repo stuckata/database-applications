@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,8 @@ namespace _01_SoftUniDatabase
         {
             using (var context = new SoftUniEntities())
             {
+                context.Employees.Attach(employee);
+                context.Entry(employee).State = EntityState.Modified;
                 context.SaveChanges();
             }         
         }
