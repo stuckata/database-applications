@@ -22,16 +22,15 @@ namespace _01_SoftUniDatabase
         {
             using (var context = new SoftUniEntities())
             {
-                return context.Employees.Find(key);
+                var employee = context.Employees.Find(key);
+                return employee;
             }
         }
 
-        public static void Modify(Employee employee, string newFirstName)
+        public static void Modify(Employee employee)
         {
             using (var context = new SoftUniEntities())
             {
-                var currentEmployee = context.Employees.Find(employee.EmployeeID);
-                currentEmployee.FirstName = newFirstName;
                 context.SaveChanges();
             }         
         }
@@ -40,6 +39,7 @@ namespace _01_SoftUniDatabase
         {
             using (var context = new SoftUniEntities())
             {
+                context.Employees.Attach(employee);
                 context.Employees.Remove(employee);
                 context.SaveChanges();
             }

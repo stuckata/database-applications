@@ -20,16 +20,17 @@ namespace _01_SoftUniDatabase
                 Salary = 32500
             };
 
-            //EmployeeDao.Add(gandolf);
+            EmployeeDao.Add(gandolf);
 
-            var currentEmployee = EmployeeDao.FindByKey(294);
+            var currentEmployee = EmployeeDao.FindByKey(301);
             Console.WriteLine(currentEmployee.FirstName);
 
-            //EmployeeDao.Modify(gandolf, "Gandalf");
-            //Console.WriteLine(gandolf.FirstName);
+            gandolf.FirstName = "Gandalf";
+            EmployeeDao.Modify(gandolf);
+            Console.WriteLine(gandolf.FirstName);
 
-            //EmployeeDao.Delete(gandolf);
-
+            var currentEmployee = EmployeeDao.FindByKey(301);
+            EmployeeDao.Delete(currentEmployee);
         }
     }
 }
