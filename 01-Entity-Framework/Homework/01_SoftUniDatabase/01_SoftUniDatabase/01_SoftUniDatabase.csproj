@@ -54,8 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="02_EmployeeDAOClass\EmployeeDao.cs" />
-    <Compile Include="02_EmployeeDAOClass\EmployeeDAOTest.cs" />
+    <Compile Include="02_EmployeeDaoClass\EmployeeDao.cs" />
+    <Compile Include="02_EmployeeDaoClass\EmployeeDaoTest.cs" />
     <Compile Include="Address.cs">
       <DependentUpon>SoftUniEntities.tt</DependentUpon>
     </Compile>

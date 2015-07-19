@@ -10,7 +10,7 @@ namespace _01_SoftUniDatabase
     {
         static void Main()
         {
-            //see the unit test classes :)
+            //see the folders for each task
         }
     }
 }
