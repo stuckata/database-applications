@@ -31,9 +31,26 @@ namespace _01_SoftUniDatabaseTests
             }
         }
 
-        public static void FindAdressesByCriteria()
+        public static void FindAddressesByCriteria()
         {
-            
+            var context = new SoftUniEntities();
+
+            var addresses =
+                (from a in context.Addresses
+                 join t in context.Towns
+                 on a.AddressID equals t.TownID
+                 orderby a.Employees.Count()
+                 select new
+                {
+                    address = a.AddressText,
+                    town = t.Name,
+                    employeesCount = a.Employees.Count()
+                }).Take(10);
+
+            foreach (var a in addresses)
+            {
+                Console.WriteLine("ADDRESS: {0}, TOWN: {1}, NUMBER OF EMPLOYEES: {2}", a.address, a.town, a.employeesCount);
+            }
         }
 
         public static void FindEmployeesByCriteria()

@@ -1,4 +1,5 @@
 ﻿using _01_SoftUniDatabaseTests;
+using System;
 
 namespace _01_SoftUniDatabase
 {
@@ -6,9 +7,14 @@ namespace _01_SoftUniDatabase
     {
         static void Main()
         {
-            //see the folders for each task
+            //for EmployeeDao please look at folder 02_EmployeeDaoClass
 
+            //03_DatabaseSearchQueries
             DatabaseSearchQueries.FindProjectsInTimePeriod();
+            Console.WriteLine();
+            Console.WriteLine("======================================================================");
+            Console.WriteLine();
+            DatabaseSearchQueries.FindAddressesByCriteria();
         }
     }
 }
