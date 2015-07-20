@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _01_SoftUniDatabaseTests;
 
 namespace _01_SoftUniDatabase
 {
@@ -11,6 +7,8 @@ namespace _01_SoftUniDatabase
         static void Main()
         {
             //see the folders for each task
+
+            DatabaseSearchQueries.FindProjectsInTimePeriod();
         }
     }
 }
