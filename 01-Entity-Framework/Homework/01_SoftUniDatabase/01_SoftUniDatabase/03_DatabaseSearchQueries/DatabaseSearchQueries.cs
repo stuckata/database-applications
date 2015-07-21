@@ -37,19 +37,19 @@ namespace _01_SoftUniDatabaseTests
 
             var addresses =
                 (from a in context.Addresses
-                 join t in context.Towns
-                 on a.AddressID equals t.TownID
-                 orderby a.Employees.Count()
-                 select new
+                group a.AddressID by new { addressText = a.AddressText, townName = a.Town.Name, employeesCount = a.Employees.Count() }
+                into ad
+                orderby ad.Key.employeesCount descending
+                select new
                 {
-                    address = a.AddressText,
-                    town = t.Name,
-                    employeesCount = a.Employees.Count()
+                   address = ad.Key.addressText,
+                   town = ad.Key.townName,
+                   empCount = ad.Key.employeesCount
                 }).Take(10);
 
             foreach (var a in addresses)
             {
-                Console.WriteLine("ADDRESS: {0}, TOWN: {1}, NUMBER OF EMPLOYEES: {2}", a.address, a.town, a.employeesCount);
+                Console.WriteLine("ADDRESS: {0}, TOWN: {1}, NUMBER OF EMPLOYEES: {2}", a.address, a.town, a.empCount);
             }
         }
 
