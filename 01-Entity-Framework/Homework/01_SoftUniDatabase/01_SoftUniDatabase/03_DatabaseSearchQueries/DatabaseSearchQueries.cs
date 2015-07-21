@@ -55,7 +55,28 @@ namespace _01_SoftUniDatabaseTests
 
         public static void FindEmployeesByCriteria()
         {
+            var context = new SoftUniEntities();
 
+            var employees =
+                from e in context.Employees
+                select new
+                {
+                    name = e.FirstName + " " + e.LastName,
+                    job = e.JobTitle,
+                    projects = e.Projects.OrderBy(p => p.Name)
+                };
+
+            foreach (var e in employees)
+            {
+                Console.WriteLine("NAME: {0} JOB: {1}", e.name, e.job);
+                Console.WriteLine("PROJECTS:");
+                Console.WriteLine("=====================================");
+                foreach (var p in e.projects)
+                {
+                    Console.WriteLine("PROJECT NAME: {0}", p.Name);
+                }
+                Console.WriteLine("=====================================");
+            }
         }
 
         public static void FindDepartmentsWithMoreThanFiveEmployees()
