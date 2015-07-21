@@ -19,6 +19,10 @@ namespace _01_SoftUniDatabase
             Console.WriteLine("======================================================================");
             Console.WriteLine();
             DatabaseSearchQueries.FindEmployeesByCriteria();
+            Console.WriteLine();
+            Console.WriteLine("======================================================================");
+            Console.WriteLine();
+            DatabaseSearchQueries.FindDepartmentsWithMoreThanFiveEmployees();
         }
     }
 }

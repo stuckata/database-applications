@@ -81,7 +81,26 @@ namespace _01_SoftUniDatabaseTests
 
         public static void FindDepartmentsWithMoreThanFiveEmployees()
         {
-          
+            var context = new SoftUniEntities();
+
+            var departments =
+                from d in context.Departments
+                let emplCount = d.Employees.Count()
+                where emplCount > 5
+                select new
+                {
+                    departmentName = d.Name,
+                    managerName = from e in context.Employees
+                                  where d.ManagerID == e.EmployeeID
+                                  select e.FirstName + " " + e.LastName,
+                    eCount = emplCount,
+                    employees = d.Employees
+                };
+
+            foreach (var d in departments)
+            {
+                Console.WriteLine("DEPARTMENT: {0} | MANAGER: {1} | EMPLOYEES: {2}", d.departmentName, d.managerName, d.eCount);
+            }
         }
     }
 }
