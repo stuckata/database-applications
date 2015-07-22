@@ -87,12 +87,13 @@ namespace _01_SoftUniDatabaseTests
                 from d in context.Departments
                 let emplCount = d.Employees.Count()
                 where emplCount > 5
+                orderby emplCount
                 select new
                 {
                     departmentName = d.Name,
-                    managerName = from e in context.Employees
+                    managerName = (from e in context.Employees
                                   where d.ManagerID == e.EmployeeID
-                                  select e.FirstName + " " + e.LastName,
+                                  select e.FirstName + " " + e.LastName).FirstOrDefault(),
                     eCount = emplCount,
                     employees = d.Employees
                 };
