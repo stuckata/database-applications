@@ -13,5 +13,9 @@ namespace StudentSystem.Model
         public ResourceType ResourceType { get; set; }
 
         public Uri Url { get; set; }
+
+        public int CourseId { get; set; }
+
+        public virtual Course Course { get; set; }
     }
 }
