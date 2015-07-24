@@ -8,11 +8,13 @@ namespace StudentSystem.Model
     {
         private ICollection<Student> students;
         private ICollection<Resource> resources;
+        private ICollection<Homework> homeworks;
 
         public Course()
         {
             this.students = new HashSet<Student>();
             this.resources = new HashSet<Resource>();
+            this.homeworks = new HashSet<Homework>();
         }
 
         public int Id { get; set; }
@@ -39,6 +41,12 @@ namespace StudentSystem.Model
         {
             get { return this.resources; }
             set { this.resources = value; }
+        }
+
+        public virtual ICollection<Homework> Homeworks
+        {
+            get { return this.homeworks; }
+            set { this.homeworks = value; }
         }
     }
 }
