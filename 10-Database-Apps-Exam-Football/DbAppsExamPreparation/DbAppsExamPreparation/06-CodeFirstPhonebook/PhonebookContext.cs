@@ -1,5 +1,6 @@
 namespace _06_CodeFirstPhonebook
 {
+    using _06_CodeFirstPhonebook.Migrations;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -9,6 +10,7 @@ namespace _06_CodeFirstPhonebook
         public PhonebookContext()
             : base("name=PhonebookContext")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<PhonebookContext, Configuration>());
         }
 
         public virtual DbSet<Phone> Phones { get; set; }

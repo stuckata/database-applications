@@ -33,15 +33,11 @@ namespace _06_CodeFirstPhonebook
 
         public string Notes { get; set; }
 
-        public int EmailId { get; set; }
-
         public virtual ICollection<Email> Emails
         {
             get { return this.emails; }
             set { this.emails = value; }
         }
-
-        public int PhoneId { get; set; }
 
         public virtual ICollection<Phone> Phones
         {
