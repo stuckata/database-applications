@@ -29,6 +29,7 @@ namespace _06_CodeFirstPhonebook
 
         public string Company { get; set; }
 
+        [DataType(DataType.Url)]
         public string SiteUrl { get; set; }
 
         public string Notes { get; set; }

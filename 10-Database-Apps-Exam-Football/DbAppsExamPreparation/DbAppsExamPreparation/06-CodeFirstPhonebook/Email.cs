@@ -12,7 +12,7 @@ namespace _06_CodeFirstPhonebook
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required][DataType(DataType.EmailAddress, ErrorMessage = "Not valid email supplied")]
         public string EmailAddress { get; set; }
     }
 }

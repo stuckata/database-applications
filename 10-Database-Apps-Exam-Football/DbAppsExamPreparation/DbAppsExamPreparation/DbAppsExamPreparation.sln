@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-ImportLeaguesTeamsFromXm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-CodeFirstPhonebook", "06-CodeFirstPhonebook\06-CodeFirstPhonebook.csproj", "{5842E812-F06D-49E6-867D-4F5C65D2BEA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-ImportFromJson", "07-ImportFromJson\07-ImportFromJson.csproj", "{D86BADD6-8DC4-4BD6-AB84-B02C9EBB77A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5842E812-F06D-49E6-867D-4F5C65D2BEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5842E812-F06D-49E6-867D-4F5C65D2BEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5842E812-F06D-49E6-867D-4F5C65D2BEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86BADD6-8DC4-4BD6-AB84-B02C9EBB77A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86BADD6-8DC4-4BD6-AB84-B02C9EBB77A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86BADD6-8DC4-4BD6-AB84-B02C9EBB77A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86BADD6-8DC4-4BD6-AB84-B02C9EBB77A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
