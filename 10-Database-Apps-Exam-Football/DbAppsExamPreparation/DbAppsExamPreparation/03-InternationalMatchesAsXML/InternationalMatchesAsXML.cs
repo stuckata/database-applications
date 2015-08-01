@@ -1,9 +1,6 @@
 ﻿using _01_DatabaseFirst;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace _03_InternationalMatchesAsXML
