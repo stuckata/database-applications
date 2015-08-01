@@ -64,17 +64,17 @@ namespace _03_InternationalMatchesAsXML
                     DateTime.TryParse(match.Date.ToString(), out date);
                     if (date.Hour != 0)
                     {
-                        xmlMatch.Add(new XAttribute("date-time", date.ToString("dd-MMM-yy hh:mm")));
+                        xmlMatch.Add(new XAttribute("date-time", date.ToString("dd-MMM-yyyy hh:mm")));
                     } else
                     {
-                        xmlMatch.Add(new XAttribute("date", date.ToString("dd-MMM-yy")));
+                        xmlMatch.Add(new XAttribute("date", date.ToString("dd-MMM-yyyy")));
                     }
                 }
 
                 matches.Add(xmlMatch);
             }
 
-            Console.WriteLine(matches);
+            matches.Save("../../international-matches.xml");
         }
     }
 }
