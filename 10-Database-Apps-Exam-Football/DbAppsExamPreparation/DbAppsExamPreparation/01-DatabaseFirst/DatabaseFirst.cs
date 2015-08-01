@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace _01_DatabaseFirst
 {
-    class Program
+    class DatabaseFirst
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            var context = new FootballEntities();
         }
     }
 }

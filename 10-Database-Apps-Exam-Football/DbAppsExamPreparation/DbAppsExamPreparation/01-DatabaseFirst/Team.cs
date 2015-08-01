@@ -14,24 +14,25 @@ namespace _01_DatabaseFirst
     
     public partial class Team
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Team()
         {
-            this.TeamMatches = new HashSet<TeamMatch>();
-            this.TeamMatches1 = new HashSet<TeamMatch>();
+            this.TeamMatchesAway = new HashSet<TeamMatch>();
+            this.TeamMatchesHome = new HashSet<TeamMatch>();
             this.Leagues = new HashSet<League>();
         }
     
         public int Id { get; set; }
+
         public string TeamName { get; set; }
+
         public string CountryCode { get; set; }
     
         public virtual Country Country { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TeamMatch> TeamMatches { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TeamMatch> TeamMatches1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+        public virtual ICollection<TeamMatch> TeamMatchesAway { get; set; }
+
+        public virtual ICollection<TeamMatch> TeamMatchesHome { get; set; }
+
         public virtual ICollection<League> Leagues { get; set; }
     }
 }

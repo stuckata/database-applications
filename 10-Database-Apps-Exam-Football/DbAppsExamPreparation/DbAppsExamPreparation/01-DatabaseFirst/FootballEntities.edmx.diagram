@@ -5,11 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="fe5e3a84ee394bcba1868ea4aa593f45" Name="Diagram1">
-        <EntityTypeShape EntityType="FootballModel.Country" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FootballModel.InternationalMatch" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="FootballModel.League" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballModel.Country" Width="2.375" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballModel.InternationalMatch" Width="2" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballModel.League" Width="1.875" PointX="2.625" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FootballModel.TeamMatch" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="FootballModel.Team" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FootballModel.Team" Width="1.875" PointX="8.25" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="FootballModel.FK_InternationalMatches_Countries_AwayCountryCode" ManuallyRouted="false" />
         <AssociationConnector Association="FootballModel.FK_InternationalMatches_Countries_HomeCountryCode" ManuallyRouted="false" />
         <AssociationConnector Association="FootballModel.FK_Leagues_Countries" ManuallyRouted="false" />

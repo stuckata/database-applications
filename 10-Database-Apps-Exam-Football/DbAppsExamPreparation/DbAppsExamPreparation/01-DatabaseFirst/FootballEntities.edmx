@@ -247,8 +247,8 @@
           <Property Name="Population" Type="Int32" />
           <Property Name="AreaSqKm" Type="Int32" />
           <Property Name="Capital" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="InternationalMatches" Relationship="Self.FK_InternationalMatches_Countries_AwayCountryCode" FromRole="Countries" ToRole="InternationalMatches" />
-          <NavigationProperty Name="InternationalMatches1" Relationship="Self.FK_InternationalMatches_Countries_HomeCountryCode" FromRole="Countries" ToRole="InternationalMatches" />
+          <NavigationProperty Name="InternationalMatchesAway" Relationship="Self.FK_InternationalMatches_Countries_AwayCountryCode" FromRole="Countries" ToRole="InternationalMatches" />
+          <NavigationProperty Name="InternationalMatchesHome" Relationship="Self.FK_InternationalMatches_Countries_HomeCountryCode" FromRole="Countries" ToRole="InternationalMatches" />
           <NavigationProperty Name="Leagues" Relationship="Self.FK_Leagues_Countries" FromRole="Countries" ToRole="Leagues" />
           <NavigationProperty Name="Teams" Relationship="Self.FK_Teams_Countries" FromRole="Countries" ToRole="Teams" />
         </EntityType>
@@ -263,8 +263,8 @@
           <Property Name="AwayGoals" Type="Int32" />
           <Property Name="MatchDate" Type="DateTime" Precision="3" />
           <Property Name="LeagueId" Type="Int32" />
-          <NavigationProperty Name="Country" Relationship="Self.FK_InternationalMatches_Countries_AwayCountryCode" FromRole="InternationalMatches" ToRole="Countries" />
-          <NavigationProperty Name="Country1" Relationship="Self.FK_InternationalMatches_Countries_HomeCountryCode" FromRole="InternationalMatches" ToRole="Countries" />
+          <NavigationProperty Name="CountryAway" Relationship="Self.FK_InternationalMatches_Countries_AwayCountryCode" FromRole="InternationalMatches" ToRole="Countries" />
+          <NavigationProperty Name="CountryHome" Relationship="Self.FK_InternationalMatches_Countries_HomeCountryCode" FromRole="InternationalMatches" ToRole="Countries" />
           <NavigationProperty Name="League" Relationship="Self.FK_InternationalMatches_Leagues" FromRole="InternationalMatches" ToRole="Leagues" />
         </EntityType>
         <EntityType Name="League">
@@ -291,8 +291,8 @@
           <Property Name="MatchDate" Type="DateTime" Precision="3" />
           <Property Name="LeagueId" Type="Int32" />
           <NavigationProperty Name="League" Relationship="Self.FK_TeamMatches_Leagues" FromRole="TeamMatches" ToRole="Leagues" />
-          <NavigationProperty Name="Team" Relationship="Self.FK_TeamMatches_Teams_AwayTeam" FromRole="TeamMatches" ToRole="Teams" />
-          <NavigationProperty Name="Team1" Relationship="Self.FK_TeamMatches_Teams_HomeTeam" FromRole="TeamMatches" ToRole="Teams" />
+          <NavigationProperty Name="TeamAway" Relationship="Self.FK_TeamMatches_Teams_AwayTeam" FromRole="TeamMatches" ToRole="Teams" />
+          <NavigationProperty Name="TeamHome" Relationship="Self.FK_TeamMatches_Teams_HomeTeam" FromRole="TeamMatches" ToRole="Teams" />
         </EntityType>
         <EntityType Name="Team">
           <Key>
@@ -302,8 +302,8 @@
           <Property Name="TeamName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CountryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="Country" Relationship="Self.FK_Teams_Countries" FromRole="Teams" ToRole="Countries" />
-          <NavigationProperty Name="TeamMatches" Relationship="Self.FK_TeamMatches_Teams_AwayTeam" FromRole="Teams" ToRole="TeamMatches" />
-          <NavigationProperty Name="TeamMatches1" Relationship="Self.FK_TeamMatches_Teams_HomeTeam" FromRole="Teams" ToRole="TeamMatches" />
+          <NavigationProperty Name="TeamMatchesAway" Relationship="Self.FK_TeamMatches_Teams_AwayTeam" FromRole="Teams" ToRole="TeamMatches" />
+          <NavigationProperty Name="TeamMatchesHome" Relationship="Self.FK_TeamMatches_Teams_HomeTeam" FromRole="Teams" ToRole="TeamMatches" />
           <NavigationProperty Name="Leagues" Relationship="Self.Leagues_Teams" FromRole="Teams" ToRole="Leagues" />
         </EntityType>
         <Association Name="FK_InternationalMatches_Countries_AwayCountryCode">

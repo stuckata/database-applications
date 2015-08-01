@@ -22,8 +22,8 @@ namespace _01_DatabaseFirst
         public Nullable<System.DateTime> MatchDate { get; set; }
         public Nullable<int> LeagueId { get; set; }
     
-        public virtual Country Country { get; set; }
-        public virtual Country Country1 { get; set; }
+        public virtual Country CountryAway { get; set; }
+        public virtual Country CountryHome { get; set; }
         public virtual League League { get; set; }
     }
 }

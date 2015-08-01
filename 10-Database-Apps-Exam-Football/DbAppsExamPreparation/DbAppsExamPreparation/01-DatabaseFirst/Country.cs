@@ -17,8 +17,8 @@ namespace _01_DatabaseFirst
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Country()
         {
-            this.InternationalMatches = new HashSet<InternationalMatch>();
-            this.InternationalMatches1 = new HashSet<InternationalMatch>();
+            this.InternationalMatchesAway = new HashSet<InternationalMatch>();
+            this.InternationalMatchesHome = new HashSet<InternationalMatch>();
             this.Leagues = new HashSet<League>();
             this.Teams = new HashSet<Team>();
         }
@@ -31,9 +31,9 @@ namespace _01_DatabaseFirst
         public string Capital { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InternationalMatch> InternationalMatches { get; set; }
+        public virtual ICollection<InternationalMatch> InternationalMatchesAway { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<InternationalMatch> InternationalMatches1 { get; set; }
+        public virtual ICollection<InternationalMatch> InternationalMatchesHome { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<League> Leagues { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

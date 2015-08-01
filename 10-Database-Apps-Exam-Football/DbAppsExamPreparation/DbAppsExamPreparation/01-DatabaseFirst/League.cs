@@ -14,7 +14,6 @@ namespace _01_DatabaseFirst
     
     public partial class League
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public League()
         {
             this.InternationalMatches = new HashSet<InternationalMatch>();
@@ -23,15 +22,17 @@ namespace _01_DatabaseFirst
         }
     
         public int Id { get; set; }
+
         public string LeagueName { get; set; }
+
         public string CountryCode { get; set; }
     
         public virtual Country Country { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
         public virtual ICollection<InternationalMatch> InternationalMatches { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
         public virtual ICollection<TeamMatch> TeamMatches { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
         public virtual ICollection<Team> Teams { get; set; }
     }
 }
